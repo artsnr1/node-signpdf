@@ -181,7 +181,7 @@ class SignPdf {
 
     pdf = Buffer.concat([pdf.slice(0, byteRange[1]), Buffer.from(`<${signature}>`), pdf.slice(byteRange[1])]); // Magic. Done.
 
-    return pdf;
+    return { pdf, signature };
   }
 
 }
